@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<LOGIN>
+  <ServerName>SASBUSSCON-PC</ServerName>
+  <ServerType>2008</ServerType>
+  <UID>sa</UID>
+  <PWD>sql</PWD>
+  <ADMINUID>admin</ADMINUID>
+  <ADMINPWD>admin</ADMINPWD>
+  <SQLCompany>SBODemoUS</SQLCompany>
+  <CUID>manager</CUID>
+  <CPWD>sas@123</CPWD>
+  <License>SASBUSSCON-PC:30000</License>
+</LOGIN>

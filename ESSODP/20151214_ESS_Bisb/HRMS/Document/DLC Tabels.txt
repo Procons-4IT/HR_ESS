@@ -1,0 +1,13 @@
+UDO
+
+Z_DLC_APHIS- Approval History
+Z_OPRQ- Purchase Requisition
+Z_ORPD- Material Return
+
+Tables
+
+Z_OPRQ - Purchase Request Header
+Z_PRQ1 - Purchase Request Lines
+Z_DLC_APHIS - Approval History
+Z_ORPD - Material Return Header
+Z_RPD1 - Material Return Lines

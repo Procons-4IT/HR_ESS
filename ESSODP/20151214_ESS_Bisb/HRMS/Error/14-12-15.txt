@@ -1,0 +1,10 @@
+
+Log Entry : 
+12/14/2015 11:30:25
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/14/2015 11:37:28
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________

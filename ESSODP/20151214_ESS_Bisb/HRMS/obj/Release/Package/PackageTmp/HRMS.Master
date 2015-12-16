@@ -1,0 +1,386 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="HRMS.master.vb" Inherits="HRMS.HRMS" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajx" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+   
+        <link href="Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+	<script src="Scripts/jquery.min.js" type="text/javascript" language="javascript"></script>
+		<script src="Scripts/jquery-1.4.1.min.js" type="text/javascript" language="javascript"></script>
+<script src="Scripts/main.js" type="text/javascript" language="javascript"></script>
+<link rel="stylesheet" href="Styles/main.css" type="text/css" />
+<script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="Styles/vThink_Theme.css" type="text/css" />
+
+<%--<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>--%>
+
+ <asp:ContentPlaceHolder ID="head" runat="server">  
+ <script type = "text/javascript" >
+     window.history.forward();
+     function noBack() { window.history.forward(); }
+</script>
+
+         <script  lang="javascript" type="text/javascript">
+             function RedirectToLoginPage() {
+                 alert("Session expired. You will be redirected to Login page");
+                 window.location = "Login.aspx";
+             }
+     
+    </script>  
+  <script type="text/javascript"  lang="javascript">
+      tday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+      tmonth = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+      function GetClock() {
+          d = new Date();
+          nday = d.getDay();
+          nmonth = d.getMonth();
+          ndate = d.getDate();
+          nyear = d.getYear();
+          nhour = d.getHours();
+          nmin = d.getMinutes();
+          nsec = d.getSeconds();
+
+          if (nyear < 1000) nyear = nyear + 1900;
+
+          if (nhour == 0) { ap = " AM"; nhour = 12; }
+          else if (nhour <= 11) { ap = " AM"; }
+          else if (nhour == 12) { ap = " PM"; }
+          else if (nhour >= 13) { ap = " PM"; nhour -= 12; }
+
+          if (nmin <= 9) { nmin = "0" + nmin; }
+          if (nsec <= 9) { nsec = "0" + nsec; }
+
+          document.getElementById('clockbox').innerHTML = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+          setTimeout("GetClock()", 1000);
+      }
+      window.onload = GetClock;
+</script>
+ <script type='text/javascript'>
+
+     $(function () {
+
+         // Stick the #nav to the top of the window
+
+         var nav = $('#menu');
+
+         var navHomeY = nav.offset().top;
+
+         var isFixed = false;
+
+         var $w = $(window);
+
+         $w.scroll(function () {
+
+             var scrollTop = $w.scrollTop();
+
+             var shouldBeFixed = scrollTop > navHomeY;
+
+             if (shouldBeFixed && !isFixed) {
+
+                 nav.css({
+
+                     position: 'fixed',
+
+                     top: 0,
+
+                     left: nav.offset().left,
+
+                     width: nav.width()
+
+                 });
+
+                 isFixed = true;
+
+             }
+
+             else if (!shouldBeFixed && isFixed) {
+
+                 nav.css({
+
+                     position: 'static'
+
+                 });
+
+                 isFixed = false;
+
+             }
+
+         });
+
+     });
+ 
+</script>
+
+ <style type="text/css">
+    .main_menu
+    {
+        width: 100px;
+        background-color:Green;
+        color: White;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 5px;
+        cursor:pointer;
+    }
+    .level_menu
+    {
+        width: 150px;
+        background-color: Green;
+        color: #fff;
+        text-align: center;
+        height: 30px;
+      
+       
+    }
+    .selected
+    {
+        background-color: Green;
+        color: #fff;
+    }
+
+
+   
+    
+/*Calendar Control CSS*/
+.cal_Theme1 .ajax__calendar_container   {
+background-color: #DEF1F4;
+border:solid 1px #77D5F7;
+}
+
+.cal_Theme1 .ajax__calendar_header  {
+background-color: #ffffff;
+margin-bottom: 4px;
+}
+
+.cal_Theme1 .ajax__calendar_title,
+.cal_Theme1 .ajax__calendar_next,
+.cal_Theme1 .ajax__calendar_prev    {
+color: #004080;
+padding-top: 3px;
+}
+
+.cal_Theme1 .ajax__calendar_body    {
+background-color: #ffffff;
+border: solid 1px #77D5F7;
+}
+
+.cal_Theme1 .ajax__calendar_dayname {
+text-align:center;
+font-weight:bold;
+margin-bottom: 4px;
+margin-top: 2px;
+color: #004080;
+}
+
+.cal_Theme1 .ajax__calendar_day {
+color: #004080;
+text-align:center;
+}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_month,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_year,
+.cal_Theme1 .ajax__calendar_active  {
+color: #004080;
+font-weight: bold;
+background-color: #DEF1F4;
+}
+
+.cal_Theme1 .ajax__calendar_today   {
+font-weight:bold;
+}
+
+.cal_Theme1 .ajax__calendar_other,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_today,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_title {
+color: #bbbbbb;
+}
+</style>
+
+    </asp:ContentPlaceHolder>
+
+
+
+</head>
+<body style="overflow-x:none;">
+<form id="form1" runat="server" style="box-shadow: 0px 0px 10px #f17700;" >
+           <ajx:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" ScriptMode="Release"   ></ajx:ToolkitScriptManager> 
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+   <tr>
+    <td >
+     <table width="100%"  cellspacing="0" cellpadding="0" style="z-index:2;position:relative;Padding:5px; background-color: #ffd65f;;background-repeat:no-repeat;background-size:100% 100%;">
+     <%--  MY LOGO & ADDRESS--%>
+      <tr>
+      <td width="80%" style="padding-left:20px;">
+      <div style="height:75px;background-image:url('Images/BG_world.png');background-repeat:no-repeat;">
+      </div>
+      <div style="margin-top:-65px;margin-left:250px;position:absolute;color:#333399; font-size:xx-large;">Human Resource Management</div>
+      <div style="margin-top:-20px;margin-left:600px;position:absolute;"><font style="color:#333399">Welcome</font> <asp:Label ID="lbluser" runat="server" ForeColor="red" ></asp:Label><font style="color:Green">!!&nbsp;</font></div>
+      </td>
+      <td width="20%" style="color:#333399;font-size:15px;" align="right"> 
+      <asp:Label ID="lblcompany" runat="server"></asp:Label><br />
+      <asp:Label ID="lblstreet" runat="server"  ></asp:Label><br />
+      <asp:Label ID="lblblock" runat="server" ></asp:Label><a>,</a> <asp:Label ID="lblstate" runat="server" ></asp:Label>
+        
+       
+      </td>
+      
+      </tr>
+   
+    </table>
+        </td>   
+      </tr>
+  
+  <tr>
+  <td>
+  <div style="width:100%;" class="BgGradiant">
+
+  <div>
+   <div id="menu">
+        <ul class="level1">
+             <li class="level1-li">
+           <a class="level1-a" href="Home.aspx">Home</a>
+          
+            <%-- <span style="color:White;margin-top:3px;position:absolute;font-size:x-large;">|</span>--%>
+                 </li>
+               <li class="level1-li"><a class="level1-a drop" href="#">Employee Self Service</a>
+            <ul class="level2">
+             <%-- <li><a href="SelfAppraisal.aspx">Self Appraisals </a></li>--%>
+                <li><a href="TrainReq.aspx">Apply Scheduled Training</a></li>                
+                <li ><a  href="EmployeeProfile.aspx">Employee Profile</a></li> 
+                    <li ><a  href="#"  class="fly">Personal Objectives</a>
+                     <ul class="level3">    
+                        <li ><a  href="ReqPerObjective.aspx">Requested personal objectives </a></li> 
+                           <li ><a  href="personeloObjective.aspx">Personal objectives </a></li> 
+                     </ul> 
+                    </li> 
+                 <li ><a  href="MgrReqtoHR.aspx">Request to HR</a></li>
+                 
+              </ul> 
+            </li>
+              <li class="level1-li"><a class="level1-a drop" href="#">Requests</a>
+                        <ul class="level2">      
+                         <li><a href="MNewTrainingReq.aspx">New Training Request</a></li>          
+                    <li><a href="TravelRequest.aspx">Travel Request</a></li>
+                     <li><a href="ExpensesClaimReq.aspx">Claim Request</a></li>
+                      <%--<li><a href="ResignRequest.aspx">Resignation Request</a></li>--%>
+                   <li><a href="LeaveRequest.aspx">Leave Request</a></li>
+                    <li><a href="MBankTimeReq.aspx">Bank Time Request</a></li>
+                   <li><a href="ReturnLveRequest.aspx">Return From Leave Request </a></li>
+                    <li><a href="PermissionRequest.aspx">Permission/Leave by hours Request </a></li>
+                    <%-- <li><a href="miscellaneousreq.aspx">Miscellaneous  Request</a></li>--%>
+               </ul>
+                  </li> 
+            
+             <li class="level1-li"><a class="level1-a drop" href="#">Manager Self Service</a>
+              <ul  class="level2">  
+               <li><a href="#" class="fly">Appraisal</a>
+                    <ul class="level3">
+                        <li><a href="LineMgrAppraisal.aspx">First Level Approval </a></li>
+                    <li><a href="SeniorMgrAppraisal.aspx">Second Level Approval </a></li> 
+                    </ul>
+                    </li>      
+                                   
+                    <li><a href="#" class="fly">Approvals</a>
+                    <ul  class="level3">
+                     <li><a href="#" class="fly">Training</a>
+                               <ul class="level4">
+                                <li><a href="RegTrainApproval.aspx">Training Request Approval</a></li>
+                                <li><a href="NewTrainApproval.aspx">New Training Request Approval</a></li>
+                               </ul>
+                               </li> 
+
+                               <li><a href="#" class="fly">ManPower Request</a>
+                               <ul class="level4">
+                                <li><a href="RecApproval.aspx">Recruitment Approval</a></li>
+                                <li><a href="ShortlistApproval.aspx">Shortlisting Approval</a></li>
+                               </ul>
+                               </li> 
+
+                                 <li><a href="#" class="fly">Employee Life Cycle</a>
+                               <ul class="level4">
+                                <li><a href="PromotionApproval.aspx">Employee Promotion Approval</a></li>
+                                <li><a href="PosChangeApproval.aspx">Employee Position Change Approval</a></li>
+                               </ul>
+                       </li>  
+                        <li><a href="#" class="fly">Travel Management</a>
+                               <ul class="level4">
+                                <li><a href="TravelApproval.aspx">Travel Approval</a></li>
+                                <li><a href="ExpensesClaimApproval.aspx">Expenses Claim Approval</a></li>
+                               </ul>
+                       </li>                    
+                        <li><a href="#" class="fly">Requests</a>
+                               <ul class="level4">
+                                <li><a href="LeaveRequestApproval.aspx">Leave Approval</a></li>
+                                <li><a href="ReturnLeaveApproval.aspx">Return From Leave Approval</a></li>
+                                 <%-- <li><a href="ResignationApproval.aspx">Resignation Approval</a></li>--%>
+                                <li><a href="PermissonhourApproval.aspx">Permission/Leave by hours Approval</a></li>
+                                 <li><a href="BankTimeApproval.aspx">Bank Time Approval</a></li>
+                               </ul>
+                       </li>           
+                              <li ><a href="InternalAppApproval.aspx">Internal Applicants Manager Approval</a></li>
+                             <li ><a href="PersonalObjectApproval.aspx">Personel Objective Approval</a></li>
+                                                 
+                    </ul>
+                    </li>
+                       
+                    <li><a  href="MssNotifications.aspx">Notifications  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                   <li><a  href="TeamList.aspx">Team List &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+               </ul>
+            </li>
+            
+                     
+         
+          <li class="level1-li"><a class="level1-a" href="HRandAdmin.aspx" >HR Notification</a></li>
+            <li class="level1-li"><a class="level1-a" href="ContactUs.aspx">ContactUs</a></li>
+          <li class="level1-li"><a class="level1-a" href="ChangePassword.aspx">Change Password</a></li>
+              <li class="level1-li"><a class="level1-a" href="Login.aspx">Logout</a></li>
+        </ul>
+    </div>
+</div>
+
+</div>
+  </td>
+  </tr>
+  
+  <tr>
+    <td align="center" valign="top">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>        
+            
+        <td width="100%" valign="top" style="height:500px; background-color:White;">
+        
+       <%--  <asp:UpdatePanel ID="Update" runat="server">
+            <ContentTemplate>--%>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+           <%--</ContentTemplate>
+            </asp:UpdatePanel>--%>
+        </td>
+        </tr>
+        </table> 
+        </td>         
+      </tr>
+      
+        <tr>
+       <td valign="middle"  colspan="2" class="foottxt" height="25px" style="width:100%;font-size:small;padding-right:20px;background-size:100% 100%; background-color:#19637D;" align="center">
+       
+       </td>
+      </tr>
+   
+    </table>
+ 
+<asp:LinkButton ID="lbtnlogout" runat="server" style="display:none;" >Logout</asp:LinkButton>
+
+
+</form>
+</body>
+</html>

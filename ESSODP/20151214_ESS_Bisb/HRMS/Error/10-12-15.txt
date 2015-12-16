@@ -1,0 +1,5 @@
+
+Log Entry : 
+12/10/2015 14:48:42
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected . Database Name is 
+__________________________

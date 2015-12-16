@@ -1,0 +1,271 @@
+﻿body
+{
+	/*
+ margin: 0 auto;
+  padding: 0;
+  color: #C7CFD1;
+  background-color: #000000;
+  background-image: url('images/Bottom_texture.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: top left; */
+  width:90%;margin:auto;min-width:600px;max-width:1200px;
+   color: #C7CFD1;
+  background-color: #666666;
+  background-image: url('images/Bottom_texture.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+.mousecursor
+{
+	TEXT-ALIGN: center; 
+	padding-right: 3px; 
+	padding-left: 3px; 
+	cursor:pointer;
+}
+.subheader{
+line-height:18pt;
+font-weight:bold;
+font-family: Arial, Helvetica, sans-serif; font-size:16px; color:#49494a;
+text-decoration:none;
+}
+
+/*.main_content{ font:normal 9pt Verdana, Helvetica, sans-serif ; color:#585656;  text-decoration:none; text-align:justify;}*/
+.main_content{ font:normal 9pt Calibri; color:Black;  text-decoration:none; text-align:justify; }
+.main_content1{ font:normal 9pt Verdana, Helvetica, sans-serif ; color:White; text-decoration:none; text-align:justify; }
+
+.login
+{
+background-image:url(../images/log_top.png);
+background-repeat:repeat-x;
+height:38px;
+margin-top:70px;
+
+}
+#art-page-background-middle-texture
+{
+  position: absolute;
+  background-image: url('images/Middle_texture.jpg');
+  background-repeat: repeat-x;
+  background-position: top left;
+  background-attachment: fixed;
+  width:80%;
+  min-height:100%;
+  overflow:visible;
+  margin-left:10%;
+    background-color: #ffffff;
+}
+div.art-header
+{
+  margin: 0 auto;
+  position: relative;
+  width: 99%;
+  height: 150px;
+  overflow: hidden;
+}
+
+h1.art-logo-name
+{
+  display: block;
+  text-align: center;
+  left:0%;
+  position: relative;
+}
+.nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+}
+
+/*#menu {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 2px 3px #333333;
+    background-color: #8AD9FF;
+        border-radius: 8px;
+       
+}
+#menu ul {
+    height: auto;
+    padding: 8px 0px;
+    margin: 0px;
+}
+#menu li { 
+display: inline; 
+padding: 20px; 
+}
+#menu a {
+    text-decoration: none;
+    color: #00F;
+    padding: 8px 8px 8px 8px;
+
+#menu a:hover {
+    color: #F90;
+    background-color:ThreeDHighlight Green;
+}*/
+
+.suckerdiv ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%; /* Width of Menu Items */
+    border-bottom: 1px solid #ccc;    
+}	
+.suckerdiv ul li{
+    position: relative;
+}	
+/*Sub level menu items */
+.suckerdiv ul li ul{
+    position: absolute;
+    width: 220px; /*sub menu width*/
+    top: 0;
+    visibility: hidden;
+}
+/* Sub level menu links style */
+.suckerdiv ul li a
+{	
+	font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    display: block;
+    overflow: auto; /*force hasLayout in IE7 */
+    color: #061431;
+    text-decoration: none;
+    padding: 8px;
+    border: 1px solid #d6dcdd;
+    border-bottom: 0;
+    background-color:White;
+}
+.suckerdiv ul li a:visited {
+color: black;
+}
+.suckerdiv ul li a:hover
+{
+	font-weight:bold;
+	color:#FFF;
+	background-color:#061431;
+}
+.suckerdiv .subfolderstyle
+{
+    background: url(../images/menu_arrow.gif) no-repeat center right;
+    background-color:#fff;
+}	
+
+.modalBackground
+{
+    background-color: Gray;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    z-index: 10000;
+}
+.button
+{
+cursor:pointer;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px;
+border:2px solid #3866a3;
+display:inline-block;
+background-color: #061431;
+border: 1px #3B8314 outset;
+padding: 2px 4px 2px 4px;
+color: white;
+height:24px;
+text-decoration: none;
+font: normal 90% Helvetica, Arial, sans-serif; font-size:small;
+}
+
+.button:visited{
+color: black;
+}
+
+.button:hover{
+border-style: inset;
+background-color: #f45501;
+border: 1px #FF6501 outset;
+text-decoration: underline;
+color: white;
+font-weight:bold;
+padding: 2px 4px 2px 4px;
+}
+
+.button:active{
+color: black;
+}
+
+.footer{ font: normal 11px/18px Arial; color:#4a4a4a; text-decoration:none;}
+
+.foottxt{
+font-family: Tahoma; font-size:11px;
+color:Silver;
+}
+
+
+.mGrid {   
+    width: 100%;   
+    background-color: #fff;   
+    margin: 5px 0 10px 0;   
+    border: solid 1px #525252;   
+    border-collapse:collapse;  
+     font: Calibri; font-size:small; 
+}  
+.mGrid td {   
+    padding: 2px;   
+    border: solid 1px #c1c1c1;   
+    color: #070707; 
+     font: Calibri; font-size:small;  
+}  
+.mGrid th {   
+    padding: 4px 2px;   
+    color: #fff;   
+  /*  background: #424242 url(grd_head1.png) repeat-x top;   */
+    border-left: solid 1px #525252;   
+   /* font-size: 0.9em;   */
+    font: Calibri; font-size:small;
+}  
+.mGrid tr:hover, .mGrid tr:hover
+{
+   background-color: #ffeb95;
+   color: black;
+   /*font-weight: bold;*/
+}
+.mGrid .alt { background: #fcfcfc url(grd_alt.png) repeat-x top; }  
+/*.mGrid .pgr { background: #424242 url(grd_pgr1.png) repeat-x top; }  */
+.mGrid .pgr { background-image:url('../Images/GreenHover1.png'); }  
+.mGrid .pgr table { margin: 5px 0; }  
+.mGrid .pgr td {   
+    border-width: 0;   
+    padding: 0 6px;   
+    border-left: solid 1px #666;   
+    font-weight: bold;   
+    color: #fff;   
+    line-height: 12px; 
+     font: Calibri; font-size:small;  
+ }     
+.mGrid .pgr a { color: #666; text-decoration: none; }  
+.mGrid .pgr a:hover { color: #000; text-decoration: none; } 
+
+.DivCorner
+{
+ border-radius: 10px; /*To make the corners rounded in IE*/
+-moz-border-radius: 10px;/*this is for mozilla*/
+-webkit-border-radius: 10px; /*chrome and other browsers*/
+}
+
+
+
+

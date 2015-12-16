@@ -1,0 +1,105 @@
+
+Log Entry : 
+12/12/2015 11:42:51
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 11:52:56
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 11:56:01
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 12:10:34
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 12:25:17
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 12:28:28
+Error in: http://localhost:1942/favicon.ico. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 12:32:08
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 12:38:59
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 12:39:54
+Error in: http://localhost:1942/Home.aspx. Error Message:Invalid column name 'U_Z_DocRefNo'.
+__________________________
+
+Log Entry : 
+12/12/2015 12:39:54
+Error in: http://localhost:1942/Home.aspx. Error Message:Object reference not set to an instance of an object.
+__________________________
+
+Log Entry : 
+12/12/2015 12:41:09
+Error in: http://localhost:1942/Home.aspx. Error Message:Invalid column name 'U_Z_DocRefNo'.
+__________________________
+
+Log Entry : 
+12/12/2015 12:42:02
+Error in: http://localhost:1942/Home.aspx. Error Message:Invalid column name 'U_Z_DocRefNo'.
+__________________________
+
+Log Entry : 
+12/12/2015 12:42:02
+Error in: http://localhost:1942/Home.aspx. Error Message:Object reference not set to an instance of an object.
+__________________________
+
+Log Entry : 
+12/12/2015 12:42:27
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 12:56:16
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 12:59:39
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 13:09:45
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 13:22:53
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
+
+Log Entry : 
+12/12/2015 13:23:32
+Error in: http://localhost:1942/Home.aspx. Error Message:Cannot find table 4.
+__________________________
+
+Log Entry : 
+12/12/2015 13:25:01
+Error in: http://localhost:1942/Home.aspx. Error Message:Cannot find table 4.
+__________________________
+
+Log Entry : 
+12/12/2015 13:25:20
+Error in: http://localhost:1942/Login.aspx. Error Message:Successfully Connected database.
+__________________________
