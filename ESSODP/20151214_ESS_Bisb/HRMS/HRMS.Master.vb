@@ -25,4 +25,13 @@ Public Class HRMS
             lblstate.Text = dbCon.ds.Tables(0).Rows(0)(3).ToString()
         End If
     End Sub
+    ''' <summary>
+    ''' A method for signing out the login user
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Protected Sub lbtnlogout_Click(sender As Object, e As EventArgs)
+        FormsAuthentication.SignOut()
+    End Sub
 End Class

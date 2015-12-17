@@ -291,7 +291,7 @@
             </td>
         </tr>
     </table>
-    <asp:LinkButton ID="lbtnlogout" runat="server" Style="display: none;">Logout</asp:LinkButton>
+    <asp:LinkButton ID="lbtnlogout" OnClick="lbtnlogout_Click" runat="server" Style="display: none;">Logout</asp:LinkButton>
     </form>
 </body>
 </html>
